@@ -1,0 +1,39 @@
+/* Базовые стили */
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html, body, #app { height: 100%; }
+/* Глобальная организация макета */
+html { display: flex; width: 100%; }
+body { margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji"; color: #111827; background: #ffffff; display: flex; flex: 1; min-height: 100vh; width: 100%; }
+#app { display: flex; flex-direction: column; min-width: 0; }
+
+/* Единые стили форм и кнопок (светлая тема) */
+input, select, textarea, button { font: inherit; }
+input[type="text"], input[type="number"], input[type="search"], input[type="email"], input[type="url"], textarea, select {
+  width: 100%;
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #111827;
+  cursor: pointer;
+}
+button:hover { background: #f9fafb; }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: 2px solid #c7d2fe;
+  outline-offset: 2px;
+  border-color: #a5b4fc;
+}
+
+input[type="range"] { width: 100%; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
